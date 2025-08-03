@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-	"sportsify/config"
-	"sportsify/user-service/utils"
+	"github.com/laurisseau/sportsify-config"
+	"github.com/laurisseau/user-service/utils"
 	"github.com/gin-gonic/gin"
-	"sportsify/user-service/models"
-	"sportsify/user-service/authenticator"
-	"sportsify/user-service/auth0client"
+	"github.com/laurisseau/user-service/models"
+	"github.com/laurisseau/user-service/authenticator"
+	"github.com/laurisseau/user-service/auth0client"
 )
 
 	

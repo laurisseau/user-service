@@ -3,8 +3,8 @@ package authenticator
 import (
 	"context"
 	"errors"
-	"sportsify/config"
-	"sportsify/user-service/models"
+	"github.com/laurisseau/sportsify-config"
+	"github.com/laurisseau/user-service/models"
 	"github.com/coreos/go-oidc/v3/oidc"
 	"golang.org/x/oauth2"
 	"encoding/json"

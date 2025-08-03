@@ -1,8 +1,7 @@
-module sportsify/user-service
+module github.com/laurisseau/user-service
 
 go 1.23.5
 
-//replace sportsify/config => ../config
 require github.com/laurisseau/sportsify-config v0.1.0
 
 require (
@@ -10,7 +9,7 @@ require (
 	github.com/gin-contrib/sessions v1.0.4
 	github.com/gin-gonic/gin v1.10.1
 	golang.org/x/oauth2 v0.30.0
-	sportsify/config v0.0.0
+	github.com/laurisseau/sportsify-config v0.1.0
 )
 
 require (

@@ -2,16 +2,16 @@ package handler
 
 import (
     "github.com/gin-gonic/gin"
-    "sportsify/user-service/authenticator"
+    "github.com/laurisseau/user-service/authenticator"
     "encoding/gob"
     "database/sql"
     "github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
-    "sportsify/user-service/handler/login"
-    "sportsify/user-service/handler/callback"
-    "sportsify/user-service/handler/profile"
-    "sportsify/user-service/handler/middleware"
-    "sportsify/user-service/handler/logout"
+    "github.com/laurisseau/user-service/handler/login"
+    "github.com/laurisseau/user-service/handler/callback"
+    "github.com/laurisseau/user-service/handler/profile"
+    "github.com/laurisseau/user-service/handler/middleware"
+    "github.com/laurisseau/user-service/handler/logout"
 )
 
 // New registers the routes and returns the router.

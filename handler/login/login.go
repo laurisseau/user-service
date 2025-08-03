@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
-	"sportsify/user-service/authenticator"
+	"github.com/laurisseau/user-service/authenticator"
 )
 
 // Handler for our login.

@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"github.com/laurisseau/sportsify-config"
 	"github.com/gin-gonic/gin"
-	"sportsify/user-service/models"
+	"github.com/laurisseau/user-service/models"
 )
 
 func UpdateUserProfile(ctx *gin.Context, updateReq models.Profile, userId string, tokenData string, jsonPayload []byte) (string, error){

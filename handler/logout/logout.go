@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 	"github.com/gin-gonic/gin"
-	"sportsify/config"
+	"github.com/laurisseau/sportsify-config"
 	"github.com/gin-contrib/sessions"
 )
 

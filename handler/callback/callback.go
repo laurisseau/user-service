@@ -2,7 +2,7 @@ package callback
 
 import (
 	"net/http"
-	"sportsify/user-service/authenticator"
+	"github.com/laurisseau/user-service/authenticator"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )
