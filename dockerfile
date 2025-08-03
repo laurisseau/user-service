@@ -1,5 +1,5 @@
 # Stage 1: Build the Go binary
-FROM golang:1.21 as builder
+FROM golang:1.21 AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -11,25 +11,25 @@ RUN go mod download
 # Copy the rest of the source code
 COPY . .
 
-# IMPORTANT: Also copy the shared config module
-COPY ../config ../config
-
-# Set environment variable so Go uses the local config path
+# Enable Go modules (usually enabled by default)
 ENV GO111MODULE=on
 
-# Build the application
+# Build the application binary
 RUN go build -o user-service main.go
 
 # Stage 2: Use a minimal runtime image
 FROM alpine:latest
 
-# Create working directory
+# Install CA certificates for HTTPS (optional but recommended)
+RUN apk --no-cache add ca-certificates
+
+# Set working directory
 WORKDIR /root/
 
-# Copy binary from builder
+# Copy the compiled binary from builder stage
 COPY --from=builder /app/user-service .
 
-# Expose app port (change if needed)
+# Expose application port
 EXPOSE 8080
 
 # Run the binary
