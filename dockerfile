@@ -27,7 +27,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 # Copy the compiled binary from builder stage
-COPY --from=builder /app/user-service .
+COPY --from=0 /app/user-service .
 
 # Expose application port
 EXPOSE 8080

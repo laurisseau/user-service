@@ -6,7 +6,7 @@ import (
 	"sportsify/user-service/handler"
     "sportsify/user-service/authenticator"
 	"github.com/gin-gonic/gin"
-    "sportsify/config"
+    "github.com/laurisseau/sportsify-config"
 )
 
 func main() {

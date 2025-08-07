@@ -2,8 +2,6 @@ module github.com/laurisseau/user-service
 
 go 1.23.5
 
-require github.com/laurisseau/sportsify-config v0.1.0
-
 require (
 	github.com/coreos/go-oidc/v3 v3.15.0
 	github.com/gin-contrib/sessions v1.0.4
