@@ -7,7 +7,7 @@ require (
 	github.com/gin-contrib/sessions v1.0.4
 	github.com/gin-gonic/gin v1.10.1
 	golang.org/x/oauth2 v0.30.0
-	github.com/laurisseau/sportsify-config v0.1.0
+	github.com/laurisseau/sportsify-config v0.1.3
 )
 
 require (
