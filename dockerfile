@@ -18,7 +18,7 @@ ENV GO111MODULE=on
 RUN go build -o user-service main.go
 
 # Stage 2: Use a minimal runtime image
-FROM alpine:latest
+FROM debian:bookworm-slim
 
 # Install CA certificates for HTTPS (optional but recommended)
 RUN apk --no-cache add ca-certificates
