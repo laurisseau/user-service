@@ -6,8 +6,8 @@ require (
 	github.com/coreos/go-oidc/v3 v3.15.0
 	github.com/gin-contrib/sessions v1.0.4
 	github.com/gin-gonic/gin v1.10.1
+	github.com/laurisseau/sportsify-config v0.1.4
 	golang.org/x/oauth2 v0.30.0
-	github.com/laurisseau/sportsify-config v0.1.3
 )
 
 require (
