@@ -21,7 +21,7 @@ RUN go build -o user-service main.go
 FROM debian:bookworm-slim
 
 # Install CA certificates for HTTPS (optional but recommended)
-RUN apk --no-cache add ca-certificates
+# RUN apk --no-cache add ca-certificates
 
 # Set working directory
 WORKDIR /root/
