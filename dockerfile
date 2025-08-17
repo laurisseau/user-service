@@ -20,8 +20,9 @@ RUN go build -o user-service main.go
 # Stage 2: Use a minimal runtime image
 FROM debian:bookworm-slim
 
-# Install CA certificates for HTTPS (optional but recommended)
-# RUN apk --no-cache add ca-certificates
+# Install CA certificates for HTTPS
+RUN apt-get update && apt-get install -y ca-certificates \
+    && update-ca-certificates \
 
 # Set working directory
 WORKDIR /root/
