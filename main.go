@@ -25,7 +25,7 @@ func main() {
 
     r.GET("/", func(c *gin.Context) {
         c.JSON(http.StatusOK, gin.H{
-            "message": "Welcome to Sportsify user-service!",
+            "message": "Welcome to Sportsify user-service",
         })
     })
 
