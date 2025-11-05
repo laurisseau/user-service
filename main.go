@@ -11,10 +11,10 @@ import (
 
 func main() {
 
-    
+
     r := gin.Default()
 
-    db := config.DB()
+    //db := config.DB()
 
     // Initialize Authenticator
 	auth, err := authenticator.New()
