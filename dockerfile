@@ -31,7 +31,7 @@ WORKDIR /root/
 COPY --from=0 /app/user-service .
 
 # Expose application port
-EXPOSE 8080
+EXPOSE 8082
 
 # Run the binary
 CMD ["./user-service"]
