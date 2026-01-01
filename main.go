@@ -29,6 +29,6 @@ func main() {
         })
     })
 
-    r.Run(":8080") // Starts server on http://localhost:8080 user application port
+    r.Run(":8082") // Starts server on http://localhost:8080 user application port
 }
 
