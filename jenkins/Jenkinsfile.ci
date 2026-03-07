@@ -12,7 +12,7 @@ metadata:
 spec:
   serviceAccountName: jenkins
   nodeSelector:
-    kubernetes.io/hostname: worker
+    pipeline: "true"
 
   containers:
     - name: jnlp
@@ -26,20 +26,26 @@ spec:
           cpu: "500m"
           memory: "512Mi"
           ephemeral-storage: "200Mi"
+
     - name: golang
       image: golang:1.23.5-alpine
       command: ['cat']
       tty: true
       resources:
         requests:
+          memory: "256Mi"
+          cpu: "200m"
           ephemeral-storage: "1Gi"
         limits:
+          memory: "1Gi"
+          cpu: "500m"
           ephemeral-storage: "2Gi"
       env:
-      - name: GOPROXY
-        value: "https://proxy.golang.org,direct"
-      - name: DOCKER_HOST
-        value: "tcp://localhost:2375"
+        - name: GOPROXY
+          value: "https://proxy.golang.org,direct"
+        - name: DOCKER_HOST
+          value: "tcp://localhost:2375"
+
     - name: docker
       image: docker:24-dind
       securityContext:
@@ -52,8 +58,12 @@ spec:
       tty: true
       resources:
         requests:
+          memory: "512Mi"
+          cpu: "500m"
           ephemeral-storage: "1Gi"
         limits:
+          memory: "2Gi"
+          cpu: "1"
           ephemeral-storage: "2Gi"
 """
     }
