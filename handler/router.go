@@ -22,9 +22,14 @@ func Router(auth *authenticator.Authenticator, router *gin.Engine) {
 	store := cookie.NewStore([]byte("secret"))
 	router.Use(sessions.Sessions("auth-session", store))
 
-	router.GET("/login", login.Handler(auth))
-	router.GET("/callback", callback.Handler(auth))
-    router.GET("/logout", logout.Handler)
-    router.GET("/profile", middleware.IsAuthenticated, profile.Handler)
-    router.PATCH("/profile/update", middleware.IsAuthenticated, profile.UpdateHandler)
+    // Create a /users route group
+    userGroup := router.Group("/users")
+    
+    {
+        userGroup.GET("/login", login.Handler(auth))
+        userGroup.GET("/callback", callback.Handler(auth))
+        userGroup.GET("/logout", logout.Handler)
+        userGroup.GET("/profile", middleware.IsAuthenticated, profile.Handler)
+        userGroup.PATCH("/profile/update", middleware.IsAuthenticated, profile.UpdateHandler)
+    }
 }

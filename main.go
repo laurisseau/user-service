@@ -23,12 +23,12 @@ func main() {
 
 	handler.Router(auth, r)
 
-    r.GET("/", func(c *gin.Context) {
+    r.GET("users/", func(c *gin.Context) {
         c.JSON(http.StatusOK, gin.H{
             "message": "Welcome to Sportsify user-service",
         })
     })
 
-    r.Run(":8082") // Starts server on http://localhost:8080 user application port
+    r.Run(":8082") // Starts server on http://localhost:8082 user application port
 }
 
